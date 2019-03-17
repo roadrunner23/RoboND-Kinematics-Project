@@ -1,0 +1,538 @@
+%!PS-Adobe-3.0
+%%Title: IK_server.py
+%%For: jiseung
+%%Creator: VIM - Vi IMproved 7.4 (2013 Aug 10)
+%%CreationDate: Wed Mar  6 01:25:44 2019
+%%DocumentData: Clean8Bit
+%%Orientation: Portrait
+%%Pages: (atend)
+%%PageOrder: Ascend
+%%BoundingBox: 59 49 564 800
+%%DocumentMedia: A4 595 842 0 () ()
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%DocumentSuppliedResources: procset VIM-Prolog 1.4 1
+%%+ encoding VIM-latin1 1.0 0
+%%Requirements: duplex collate color
+%%EndComments
+%%BeginDefaults
+%%PageResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%PageMedia: A4
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset VIM-Prolog
+%%BeginDocument: /usr/share/vim/vim74/print/prolog.ps
+%!PS-Adobe-3.0 Resource-ProcSet
+%%Title: VIM-Prolog
+%%Version: 1.4 1
+%%EndComments
+% Editing of this file is NOT RECOMMENDED.  You run a very good risk of causing
+% all PostScript printing from VIM failing if you do.  PostScript is not called
+% a write-only language for nothing!
+/packedarray where not{userdict begin/setpacking/pop load def/currentpacking
+false def end}{pop}ifelse/CP currentpacking def true setpacking
+/bd{bind def}bind def/ld{load def}bd/ed{exch def}bd/d/def ld
+/db{dict begin}bd/cde{currentdict end}bd
+/T true d/F false d
+/SO null d/sv{/SO save d}bd/re{SO restore}bd
+/L2 systemdict/languagelevel 2 copy known{get exec}{pop pop 1}ifelse 2 ge d
+/m/moveto ld/s/show ld /ms{m s}bd /g/setgray ld/r/setrgbcolor ld/sp{showpage}bd
+/gs/gsave ld/gr/grestore ld/cp/currentpoint ld
+/ul{gs UW setlinewidth cp UO add 2 copy newpath m 3 1 roll add exch lineto
+stroke gr}bd
+/bg{gs r cp BO add 4 -2 roll rectfill gr}bd
+/sl{90 rotate 0 exch translate}bd
+L2{
+/sspd{mark exch{setpagedevice}stopped cleartomark}bd
+/nc{1 db/NumCopies ed cde sspd}bd
+/sps{3 db/Orientation ed[3 1 roll]/PageSize ed/ImagingBBox null d cde sspd}bd
+/dt{2 db/Tumble ed/Duplex ed cde sspd}bd
+/c{1 db/Collate ed cde sspd}bd
+}{
+/nc{/#copies ed}bd
+/sps{statusdict/setpage get exec}bd
+/dt{statusdict/settumble 2 copy known{get exec}{pop pop pop}ifelse
+statusdict/setduplexmode 2 copy known{get exec}{pop pop pop}ifelse}bd
+/c{pop}bd
+}ifelse
+/ffs{findfont exch scalefont d}bd/sf{setfont}bd
+/ref{1 db findfont dup maxlength dict/NFD ed{exch dup/FID ne{exch NFD 3 1 roll
+put}{pop pop}ifelse}forall/Encoding findresource dup length 256 eq{NFD/Encoding
+3 -1 roll put}{pop}ifelse NFD dup/FontType get 3 ne{/CharStrings}{/CharProcs}
+ifelse 2 copy known{2 copy get dup maxlength dict copy[/questiondown/space]{2
+copy known{2 copy get 2 index/.notdef 3 -1 roll put pop exit}if pop}forall put
+}{pop pop}ifelse dup NFD/FontName 3 -1 roll put NFD definefont pop end}bd
+CP setpacking
+(\004)cvn{}bd
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%BeginResource: encoding VIM-latin1
+%%BeginDocument: /usr/share/vim/vim74/print/latin1.ps
+%!PS-Adobe-3.0 Resource-Encoding
+%%Title: VIM-latin1
+%%Version: 1.0 0
+%%EndComments
+/VIM-latin1[
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quotesingle
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/grave /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron
+/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered
+/cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis]
+/Encoding defineresource pop
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%EndProlog
+%%BeginSetup
+595 842 0 sps
+1 nc
+T F dt
+T c
+%%IncludeResource: font Courier
+/_F0 /VIM-latin1 /Courier ref
+/F0 10 /_F0 ffs
+%%IncludeResource: font Courier-Bold
+/_F1 /VIM-latin1 /Courier-Bold ref
+/F1 10 /_F1 ffs
+%%IncludeResource: font Courier-Oblique
+/_F2 /VIM-latin1 /Courier-Oblique ref
+/F2 10 /_F2 ffs
+%%IncludeResource: font Courier-BoldOblique
+/_F3 /VIM-latin1 /Courier-BoldOblique ref
+/F3 10 /_F3 ffs
+/UO -1 d
+/UW 0.5 d
+/BO -2.5 d
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(IK_server.py                                                                  Page 1)59.5 792.4 ms
+F0 sf
+0.376 0 0.376 r
+(#!/usr/bin/env python)59.5 772.4 ms
+(# Copyright \(C\) 2017 Udacity Inc.)59.5 752.4 ms
+(#)59.5 742.4 ms
+(# This file is part of Robotic Arm: Pick and Place project for Udacity)59.5 732.4 ms
+(# Robotics nano-degree program)59.5 722.4 ms
+(#)59.5 712.4 ms
+(# All Rights Reserved.)59.5 702.4 ms
+(# Author: Harsh Pandya)59.5 682.4 ms
+(# import modules)59.5 662.4 ms
+0.498 0.125 0.498 r
+(import)59.5 652.4 ms
+0 g
+( rospy)s
+0.498 0.125 0.498 r
+(import)59.5 642.4 ms
+0 g
+( tf)s
+0.498 0.125 0.498 r
+(from)59.5 632.4 ms
+0 g
+( kuka_arm.srv )s
+0.498 0.125 0.498 r
+(import)s
+0 g
+( *)s
+0.498 0.125 0.498 r
+(from)59.5 622.4 ms
+0 g
+( trajectory_msgs.msg )s
+0.498 0.125 0.498 r
+(import)s
+0 g
+( JointTrajectory, JointTrajectoryPoint)s
+0.498 0.125 0.498 r
+(from)59.5 612.4 ms
+0 g
+( geometry_msgs.msg )s
+0.498 0.125 0.498 r
+(import)s
+0 g
+( Pose)s
+0.498 0.125 0.498 r
+(from)59.5 602.4 ms
+0 g
+( mpmath )s
+0.498 0.125 0.498 r
+(import)s
+0 g
+( *)s
+0.498 0.125 0.498 r
+(from)59.5 592.4 ms
+0 g
+( sympy )s
+0.498 0.125 0.498 r
+(import)s
+0 g
+( *)s
+0.498 0.125 0.498 r
+(import)59.5 582.4 ms
+0 g
+( numpy )s
+0.376 g
+(as)s
+0 g
+( np)s
+0.376 g
+(def)59.5 552.4 ms
+0 g
+( )s
+0.498 0.251 0.251 r
+(handle_calculate_IK)s
+0 g
+(\(req\):)s
+(    rospy.loginfo\()59.5 542.4 ms
+0.498 0.498 0 r
+("Received %s eef-poses from the plan")s
+0 g
+( % len\(req.poses\)\))s
+(    )59.5 532.4 ms
+0.376 g
+(if)s
+0 g
+( len\(req.poses\) < 1:)s
+(        print )59.5 522.4 ms
+0.498 0.498 0 r
+("No valid poses received")s
+0 g
+(        )59.5 512.4 ms
+0.376 g
+(return)s
+0 g
+( -1)s
+(    )59.5 502.4 ms
+0.376 g
+(else)s
+0 g
+(:)s
+(        )59.5 482.4 ms
+0.376 0 0.376 r
+(### Your FK code here)s
+0 g
+(        )59.5 472.4 ms
+0.376 0 0.376 r
+(# Create symbols)s
+0 g
+(        q1,q2,q3,q4,q5,q6,q7 = symbols\()59.5 462.4 ms
+0.498 0.498 0 r
+('q1:8')s
+0 g
+(\))s
+(        d1,d2,d3,d4,d5,d6,d7 = symbols\()59.5 452.4 ms
+0.498 0.498 0 r
+('d1:8')s
+0 g
+(\))s
+(        a0,a1,a2,a3,a4,a5,a6 = symbols\()59.5 442.4 ms
+0.498 0.498 0 r
+('a0:7')s
+0 g
+(\))s
+(        alpha0,alpha1,alpha2,alpha3,alpha4,alpha5,alpha6 = symbols\()59.5 432.4 ms
+0.498 0.498 0 r
+('alpha0:7')s
+0 g
+(\))s
+(        )59.5 412.4 ms
+0.376 0 0.376 r
+(# Create Modified DH parameters)s
+0 g
+(        s = {alpha0:     0, a0:      0, d1:  0.75, q1:      q1,)59.5 402.4 ms
+(             alpha1: -pi/2, a1:   0.35, d2:     0, q2: q2-pi/2,)59.5 392.4 ms
+(             alpha2:     0, a2:   1.25, d3:     0, q3:      q3,)59.5 382.4 ms
+(             alpha3: -pi/2, a3: -0.054, d4:   1.5, q4:      q4,)59.5 372.4 ms
+(             alpha4:  pi/2, a4:      0, d5:     0, q5:      q5,)59.5 362.4 ms
+(             alpha5: -pi/2, a5:      0, d6:     0, q6:      q6,)59.5 352.4 ms
+(             alpha6:     0, a6:      0, d7: 0.303, q7:       0})59.5 342.4 ms
+(        )59.5 332.4 ms
+(        )59.5 322.4 ms
+0.376 0 0.376 r
+(# Define Modified DH Transformation matrix)s
+0 g
+(        )59.5 312.4 ms
+0.376 g
+(def)s
+0 g
+( )s
+0.498 0.251 0.251 r
+(TF_Matrix)s
+0 g
+(\(alpha, a, d, q\):)s
+(            TF = Matrix\([[           cos\(q\),           -sin\(q\),           0,        )59.5 302.4 ms
+(     a],)59.5 292.4 ms
+(                       [sin\(q\)*cos\(alpha\), cos\(q\)*cos\(alpha\), -sin\(alpha\), -sin\(alph)59.5 282.4 ms
+(a\)*d],)59.5 272.4 ms
+(                       [sin\(q\)*sin\(alpha\), cos\(q\)*sin\(alpha\),  cos\(alpha\),  cos\(alph)59.5 262.4 ms
+(a\)*d],)59.5 252.4 ms
+(                       [                0,                 0,           0,          )59.5 242.4 ms
+(   1]]\))59.5 232.4 ms
+(            )59.5 222.4 ms
+0.376 g
+(return)s
+0 g
+( TF)s
+(    )59.5 212.4 ms
+(        T0_1 = TF_Matrix\(alpha0, a0, d1, q1\).subs\(s\))59.5 202.4 ms
+(        T1_2 = TF_Matrix\(alpha1, a1, d2, q2\).subs\(s\))59.5 192.4 ms
+(        T2_3 = TF_Matrix\(alpha2, a2, d3, q3\).subs\(s\))59.5 182.4 ms
+(        T3_4 = TF_Matrix\(alpha3, a3, d4, q4\).subs\(s\))59.5 172.4 ms
+(        T4_5 = TF_Matrix\(alpha4, a4, d5, q5\).subs\(s\))59.5 162.4 ms
+(        T5_6 = TF_Matrix\(alpha5, a5, d6, q6\).subs\(s\))59.5 152.4 ms
+(        T6_G = TF_Matrix\(alpha6, a6, d7, q7\).subs\(s\))59.5 142.4 ms
+(        R_z = Matrix\([[    cos\(np.pi\), -sin\(np.pi\),             0, 0],)59.5 122.4 ms
+(                      [    sin\(np.pi\),  cos\(np.pi\),             0, 0],)59.5 112.4 ms
+(                      [             0,           0,             1, 0],)59.5 102.4 ms
+(                      [             0,           0,             0, 1]]\))59.5 92.4 ms
+(        R_y = Matrix\([[ cos\(-np.pi/2\),           0, sin\(-np.pi/2\), 0],)59.5 82.4 ms
+(                      [             0,           1,             0, 0],)59.5 72.4 ms
+(                      [-sin\(-np.pi/2\),           0, cos\(-np.pi/2\), 0],)59.5 62.4 ms
+(                      [             0,           0,             0, 1]]\))59.5 52.4 ms
+re sp
+%%PageTrailer
+%%Page: 2 2
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(IK_server.py                                                                  Page 2)59.5 792.4 ms
+F0 sf
+(        T0_G = simplify\(T0_1*T1_2*T2_3*T3_4*T4_5*T5_6*T6_G*R_z*R_y\))59.5 762.4 ms
+(        )59.5 742.4 ms
+0.376 0 0.376 r
+(# Create individual transformation matrices)s
+0 g
+(        )59.5 732.4 ms
+0.376 0 0.376 r
+(# Extract rotation matrices from the transformation matrices)s
+0 g
+(        )59.5 722.4 ms
+0.376 0 0.376 r
+(###)s
+0 g
+(        )59.5 702.4 ms
+0.376 0 0.376 r
+(# Initialize service response)s
+0 g
+(        joint_trajectory_list = [])59.5 692.4 ms
+(        )59.5 682.4 ms
+0.376 g
+(for)s
+0 g
+( x )s
+0.376 g
+(in)s
+0 g
+( xrange\(0, len\(req.poses\)\):)s
+(            )59.5 672.4 ms
+0.376 0 0.376 r
+(# IK code starts here)s
+0 g
+(            joint_trajectory_point = JointTrajectoryPoint\(\))59.5 662.4 ms
+(            )59.5 642.4 ms
+0.376 0 0.376 r
+(# Extract end-effector position and orientation from request)s
+0 g
+(            )59.5 632.4 ms
+0.376 0 0.376 r
+(# px,py,pz = end-effector position)s
+0 g
+(            )59.5 622.4 ms
+0.376 0 0.376 r
+(# roll, pitch, yaw = end-effector orientation)s
+0 g
+(            px = req.poses[x].position.x)59.5 612.4 ms
+(            py = req.poses[x].position.y)59.5 602.4 ms
+(            pz = req.poses[x].position.z)59.5 592.4 ms
+(            \(roll, pitch, yaw\) = tf.transformations.euler_from_quaternion\()59.5 572.4 ms
+(                [req.poses[x].orientation.x, req.poses[x].orientation.y,)59.5 562.4 ms
+(                    req.poses[x].orientation.z, req.poses[x].orientation.w]\))59.5 552.4 ms
+(            )59.5 532.4 ms
+0.376 0 0.376 r
+(### Your IK code here)s
+0 g
+(            )59.5 522.4 ms
+0.376 0 0.376 r
+(# Compensate for rotation discrepancy between DH parameters and Gazebo)s
+0 g
+(            r, p, y = symbols\()59.5 512.4 ms
+0.498 0.498 0 r
+('r p y')s
+0 g
+(\))s
+(            ROT_x = Matrix\([[     1,       0,      0],)59.5 492.4 ms
+(                            [      0, cos\(r\),-sin\(r\)],)59.5 482.4 ms
+(                            [      0, sin\(r\), cos\(r\)]]\))59.5 472.4 ms
+(            ROT_y = Matrix\([[ cos\(p\),      0, sin\(p\)],)59.5 462.4 ms
+(                            [      0,      1,      0],)59.5 452.4 ms
+(                            [-sin\(p\),      0, cos\(p\)]]\))59.5 442.4 ms
+(            ROT_z = Matrix\([[ cos\(y\),-sin\(y\),      0],)59.5 432.4 ms
+(                            [ sin\(y\), cos\(y\),      0],)59.5 422.4 ms
+(                            [      0,      0,      1]]\))59.5 412.4 ms
+(            ROT_EE = ROT_z*ROT_y*ROT_x)59.5 392.4 ms
+(            ROT_Error = ROT_z.subs\(y, radians\(180\)\) * ROT_y.subs\(p, radians\(-90\)\))59.5 382.4 ms
+(            ROT_EE = ROT_EE * ROT_Error)59.5 362.4 ms
+(            ROT_EE = ROT_EE.subs\({)59.5 352.4 ms
+0.498 0.498 0 r
+('r')s
+0 g
+(:roll, )s
+0.498 0.498 0 r
+('p')s
+0 g
+(:pitch, )s
+0.498 0.498 0 r
+('y')s
+0 g
+(:yaw}\))s
+(            EE = Matrix\([[px],)59.5 332.4 ms
+(                         [py],)59.5 322.4 ms
+(                         [pz]]\))59.5 312.4 ms
+(            WC = EE - \(0.303\) * ROT_EE[:,2])59.5 292.4 ms
+(            theta1 = atan2\(WC[1],WC[0]\))59.5 272.4 ms
+(            side_a = 1.501)59.5 262.4 ms
+(            side_b = sqrt\(pow\(\(sqrt\(WC[0]*WC[0]+WC[1]*WC[1]\)-0.35\),2\) + pow\(\(WC[2] -)59.5 252.4 ms
+( 0.75\), 2\)\))59.5 242.4 ms
+(            side_c = 1.25)59.5 232.4 ms
+(            angle_a = acos\(\(side_b*side_b + side_c*side_c - side_a*side_a\)/\(2*side_b)59.5 212.4 ms
+(*side_c\)\))59.5 202.4 ms
+(            angle_b = acos\(\(side_a*side_a + side_c*side_c - side_b*side_b\)/\(2*side_a)59.5 192.4 ms
+(*side_c\)\))59.5 182.4 ms
+(            angle_c = acos\(\(side_a*side_a + side_b*side_b - side_c*side_c\)/\(2*side_a)59.5 172.4 ms
+(*side_b\)\))59.5 162.4 ms
+(            theta2 = pi/2 - angle_a - atan2\(WC[2] - 0.75, sqrt\(WC[0]*WC[0] + WC[1]*W)59.5 142.4 ms
+(C[1]\) -0.35\))59.5 132.4 ms
+(            theta3 = pi/2 -\(angle_b + 0.036\))59.5 122.4 ms
+(            R0_3 = T0_1[0:3,0:3] * T1_2[0:3,0:3] * T2_3[0:3,0:3])59.5 102.4 ms
+(            R0_3 = R0_3.evalf\(subs={q1:theta1, q2:theta2, q3:theta3}\))59.5 92.4 ms
+(            R3_6 = R0_3.inv\(method=)59.5 82.4 ms
+0.498 0.498 0 r
+("LU")s
+0 g
+(\) * ROT_EE)s
+(            theta4 = atan2\(R3_6[2,2], -R3_6[0,2]\))59.5 62.4 ms
+(            theta5 = atan2\(sqrt\(R3_6[0,2]*R3_6[0,2] + R3_6[2,2]*R3_6[2,2]\),R3_6[1,2])59.5 52.4 ms
+re sp
+%%PageTrailer
+%%Page: 3 3
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(IK_server.py                                                                  Page 3)59.5 792.4 ms
+F0 sf
+(\))59.5 772.4 ms
+(            theta6 = atan2\(-R3_6[1,1], R3_6[1,0]\))59.5 762.4 ms
+(            )59.5 752.4 ms
+0.376 0 0.376 r
+(# Calculate joint angles using Geometric IK method)s
+0 g
+(            )59.5 742.4 ms
+0.376 0 0.376 r
+(# Populate response for the IK request)s
+0 g
+(            )59.5 732.4 ms
+0.376 0 0.376 r
+(# In the next line replace theta1,theta2...,theta6 by your joint angle v)s
+(ariables)59.5 722.4 ms
+0 g
+(            joint_trajectory_point.positions = [theta1, theta2, theta3, theta4, thet)59.5 712.4 ms
+(a5, theta6])59.5 702.4 ms
+(            joint_trajectory_list.append\(joint_trajectory_point\))59.5 692.4 ms
+(        rospy.loginfo\()59.5 672.4 ms
+0.498 0.498 0 r
+("length of Joint Trajectory List: %s")s
+0 g
+( % len\(joint_trajectory_l)s
+(ist\)\))59.5 662.4 ms
+(        )59.5 652.4 ms
+0.376 g
+(return)s
+0 g
+( CalculateIKResponse\(joint_trajectory_list\))s
+0.376 g
+(def)59.5 622.4 ms
+0 g
+( )s
+0.498 0.251 0.251 r
+(IK_server)s
+0 g
+(\(\):)s
+(    )59.5 612.4 ms
+0.376 0 0.376 r
+(# initialize node and declare calculate_ik service)s
+0 g
+(    rospy.init_node\()59.5 602.4 ms
+0.498 0.498 0 r
+('IK_server')s
+0 g
+(\))s
+(    s = rospy.Service\()59.5 592.4 ms
+0.498 0.498 0 r
+('calculate_ik')s
+0 g
+(, CalculateIK, handle_calculate_IK\))s
+(    print )59.5 582.4 ms
+0.498 0.498 0 r
+("Ready to receive an IK request")s
+0 g
+(    rospy.spin\(\))59.5 572.4 ms
+0.376 g
+(if)59.5 552.4 ms
+0 g
+( __name__ == )s
+0.498 0.498 0 r
+("__main__")s
+0 g
+(:)s
+(    IK_server\(\))59.5 542.4 ms
+re sp
+%%PageTrailer
+%%Trailer
+%%Pages: 3
+%%EOF
+
